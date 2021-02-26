@@ -10,13 +10,21 @@
 # persistence(4) => 0   # Because 4 is already a one-digit number
 
 def persistence(n):
+    #turn the number into a string
     persist = str(n)
+    #create a variable that will count the number of iterations
     count = 0
+    #continue looping until the product of the digits in persist is of length one (essentially if persist has only one digit stop looping)
     while len(persist) != 1:
+        #create a variable that will hold the product
         product = 1
+        #loop through each character in the string
         for digit in persist:
+            #multiply the digits together and store it in product
             product*=int(digit)
+        #add one to the # of iterations
         count+=1
+        #convert the product into a string and store it in persist
         persist = str(product)
     return count
 

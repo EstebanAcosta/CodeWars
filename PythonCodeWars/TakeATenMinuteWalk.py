@@ -10,7 +10,7 @@
 # only). It will never give you an empty array (that's not a walk, that's standing still!)".
 
 def is_valid_walk(walk):
-    #if the walking sequence has a length less than ten or more than (if the string has more than ten characters or less than 10 characters)
+    #if the walking sequence has a length less than ten or more than 10 (if the string has more than ten characters or less than 10 characters)
     if len(walk) < 10 or len(walk) > 10:
         return False
     #if the walking sequence has a length of ten(if the string has exactly ten characters)

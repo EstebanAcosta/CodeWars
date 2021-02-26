@@ -1,0 +1,41 @@
+# Some numbers have funny properties. For example:
+
+# 89 --> 8¹ + 9² = 89 * 1
+
+# 695 --> 6² + 9³ + 5⁴= 1390 = 695 * 2
+
+# 46288 --> 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
+
+# Given a positive integer n written as abcd... (a, b, c, d... being digits) and a positive integer p
+
+# we want to find a positive integer k, if it exists, such as the sum of the digits of n taken to the successive powers of p is equal to k * n.
+# In other words:
+
+# Is there an integer k such as : (a ^ p + b ^ (p+1) + c ^(p+2) + d ^ (p+3) + ...) = n * k
+
+# If it is the case we will return k, if not return -1.
+
+# Note: n and p will always be given as strictly positive integers.
+
+# dig_pow(89, 1) should return 1 since 8¹ + 9² = 89 = 89 * 1
+# dig_pow(92, 1) should return -1 since there is no k such as 9¹ + 2² equals 92 * k
+# dig_pow(695, 2) should return 2 since 6² + 9³ + 5⁴= 1390 = 695 * 2
+# dig_pow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
+
+def dig_pow(n, p):
+    #convert the number into a string
+    n = str(n)
+    #create a variable that will hold the sum
+    sum = 0
+    #loop through each character in the string n (loop through each digit in the number)
+    for pow in range(0,len(n)):
+        #take the digit, convert the digit into a number and take that number to the p power and add it to sum
+        sum += int(n[pow]) ** p
+        #add one to p
+        p+=1
+
+    #if the sum is divisible by the number (has a remainder of 0)
+    if sum % int(n) == 0:
+         #return the division of the sum and the number
+        return sum/int(n)
+    return -1

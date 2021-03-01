@@ -1,3 +1,4 @@
+#Author:Esteban Acosta
 import re
 singleElementTokens = ("^[A-Z][a-z][0-9]+" , "^[A-Z][a-z]", "^[A-Z][0-9]+", "^[A-Z]")
 multipleElementsTokens = ("^\[[A-Za-z0-9\(\)]+\][0-9]+", "^\[[A-Za-z0-9\(\)]+\]",

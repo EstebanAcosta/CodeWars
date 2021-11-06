@@ -17,16 +17,19 @@ char* remove_char(char* dst, const char* src)
        j++;
      }
    }
+
   return dst;
 }
 
 int main(int argc, char const *argv[])
 {
 
-	char * src = "johnny";
-	char * dst = "#####";
-	
-    char* d = remove_char(dst,src);
-	/* code */
+	char * src = "johnnathon";
+	char * dst = malloc((strlen(src) + 1)*sizeof(char));
+
+    remove_char(dst,src);
+
+    printf("%s",dst);
+
 	return 0;
 }

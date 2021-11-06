@@ -37,7 +37,7 @@ char *accum(const char *source)
 
 int main(int argc, char const *argv[])
 {
-  char * str = "kLoASsamdadDAD";
+  char * str = "SAMMMYdSOSA";
   
   printf("%s\n",accum(str));
   return 0;

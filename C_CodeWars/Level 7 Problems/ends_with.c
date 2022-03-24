@@ -23,7 +23,7 @@ bool solution(const char *string, const char *ending)
 int main(int argc, char const *argv[])
 {
     char * string = "abcdefg";
-    char * ending = "h";
+    char * ending = "g";
     bool confirm = solution(string,ending);
     printf("%d\n",confirm );
     return 0;
